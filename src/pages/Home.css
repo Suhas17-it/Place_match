@@ -1,1 +1,124 @@
-/* Home page specific styles - inherits from App.css */
+/* Home page specific styles */
+
+.mode-switcher-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.mode-switcher-tabs {
+    display: flex;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--glass-border);
+    padding: 0.35rem;
+    border-radius: 30px;
+    gap: 0.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mode-tab {
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mode-tab:hover {
+    color: var(--text-primary);
+}
+
+.mode-tab.active {
+    background: var(--primary-gradient);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.multi-locations-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.location-slot-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: var(--transition-normal);
+    position: relative;
+}
+
+.location-slot-card.active-slot {
+    border-color: var(--accent-color);
+    background: rgba(102, 126, 234, 0.15);
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.3);
+}
+
+.slot-badge-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slot-number-badge {
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.slot-title-input {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+.slot-coords {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.add-location-btn {
+    border: 2px dashed var(--glass-border);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: var(--transition-normal);
+    min-height: 100px;
+}
+
+.add-location-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background: rgba(102, 126, 234, 0.05);
+}
